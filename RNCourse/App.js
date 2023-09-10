@@ -4,7 +4,10 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello, World!!!!</Text>
+      <View>
+        <Text>Welcome to my app</Text>
+      </View>
+      <Text style={{color: "red", margin: 16, borderWidth: 2, borderColor:"green"}}>Hello, World!!!!</Text>
       <Button title='Click Me!'/>
       <StatusBar style="auto" />
     </View>
