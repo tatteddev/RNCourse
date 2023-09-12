@@ -19,7 +19,7 @@ export default function App() {
   function addGoalHandler() {
     setCourseGoals((courseGoals) => [
       ...courseGoals,
-      { text: enteredGoal, key: Math.random().toString() },
+      { text: enteredGoal, id: Math.random().toString() },
     ]);
     setEnteredGoal("");
   }
@@ -44,6 +44,9 @@ export default function App() {
                 <Text style={styles.goalText}>{itemData.item.text}</Text>
               </View>
             );
+          }}
+          keyExtractor={(item, index) => {
+            return item.id;
           }}
         />
       </View>
